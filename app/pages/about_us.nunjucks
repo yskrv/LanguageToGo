@@ -1,0 +1,149 @@
+{% extends 'layout.nunjucks' %}
+
+{% block head %}
+     <link rel="stylesheet" href="./css/about_us.css">
+     <script defer src="./js/about_us.js"></script>
+     <title>О нас - Language to go</title>
+{% endblock %}
+
+{% block content %} 
+          <main>
+          <section class="about__us">
+               <div class="container">
+                    <div class="page__links">
+                         <a href="./index.html">Главная</a><span class="arrow__link">></span>О нас 
+                    </div>
+                    <div class="title">О нас</div>
+                    <div class="subtitle">Говори легко - живи свободно!</div>
+                    <div class="about__us">
+                         <div class="about__us__row">
+                              <div class="about__us__part">
+                                   <div class="title">
+                                        <span>Language2GO</span> - интерактивная онлайн-школа иностранных языков
+                                   </div>
+                                   <div class="text">
+                                        Это новая, полностью автоматизированная платформа, которая  поможет вам прокачать язык для работы, учебы или общения.<br><br>Наша система позволит вам в динамичной игровой форме овладеть иностранным языком, свободно мыслить и говорить, строить предложения, поддерживать разговор в любом обществе и в любой жизненной ситуации.
+                                   </div>
+                              </div>
+                              <div class="about__us__part">
+                                   <img src="./img/about_us/item-1.png" alt="">
+                              </div>
+                         </div>
+                         <div class="about__us__row">
+                              <div class="about__us__part">
+                                   <img src="./img/about_us/item-2.png" alt="">
+                              </div>
+                              <div class="about__us__part">
+                                   <div class="title">
+                                        Для тех, кто сам хочет строить свою жизнь и стремится к мечте!
+                                   </div>
+                                   <div class="text">
+                                        Наша школа подойдет для школьников и студентов, бизнесменов и путешественников, амбициозных предпринимателей и находчивых эмигрантов. Мы дадим вам основы и прочные знания иностранных языков за короткое время и в удобном месте. 
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="about__us__row">
+                              <div class="about__us__part">
+                                   <div class="title">
+                                        <span>Language2GO</span> отличается от классических курсов изучения языка
+                                   </div>
+                                   <div class="text">
+                                        Это понятная, нескучная и полностью интерактивная система! Вы сами выбираете где, как и сколько заниматься. Она подойдет всем, кто хочет за короткий срок качественно изменить свою жизнь, всем, кто готов искать новые возможности с новым языком!
+                                   </div>
+                              </div>
+                              <div class="about__us__part">
+                                   <img src="./img/about_us/item-3.png" alt="">
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section class="teachers">
+               <div class="container">
+                    <div class="title">Курсы создали профессиональные филологи и педагоги</div>
+                    <div class="subtitle">Носители языка, преподаватели зарубежных университетов, которые много лет работают в том числе и в России, владеют методиками преподавания своего языка, как иностранного и прекрасно знают нюансы преподавания именно в русскоязычной среде.</div>
+                    <div class="teachers__list">
+                         <div class="teachers__item">
+                              <div class="teachers__img">
+                                   <img src="./img/about_us/teacher-1.png">
+                                   <div class="teachers__bg">
+                                        <div class="teachers__links">
+                                             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://vk.com/?s" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="teachers__name">Агасси Мартиросян</div>
+                              <div class="teachers__subject">Преподаватель армянского</div>
+                         </div>
+                         <div class="teachers__item">
+                              <div class="teachers__img">
+                                   <img src="./img/about_us/teacher-2.png">
+                                   <div class="teachers__bg">
+                                        <div class="teachers__links">
+                                             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://vk.com/?s" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="teachers__name">Валентина Набрежная</div>
+                              <div class="teachers__subject">Преподаватель английского</div>
+                         </div>
+                         <div class="teachers__item">
+                              <div class="teachers__img">
+                                   <img src="./img/about_us/teacher-3.png">
+                                   <div class="teachers__bg">
+                                        <div class="teachers__links">
+                                             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://vk.com/?s" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="teachers__name">Владимир Зеленков</div>
+                              <div class="teachers__subject">Преподаватель русского</div>
+                         </div>
+                         <div class="teachers__item">
+                              <div class="teachers__img">
+                                   <img src="./img/about_us/teacher-4.png">
+                                   <div class="teachers__bg">
+                                        <div class="teachers__links">
+                                             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://vk.com/?s" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                                             </a>
+                                             <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="teachers__name">Елена Руппс</div>
+                              <div class="teachers__subject">Преподаватель немецкого</div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          {% include 'register.nunjucks' %}
+     </main>
+{% endblock %}

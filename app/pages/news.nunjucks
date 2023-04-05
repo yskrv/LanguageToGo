@@ -1,0 +1,77 @@
+{% extends 'layout.nunjucks' %}
+
+{% block head %}
+     <link rel="stylesheet" href="./css/news.css">
+     <title>Блог - Language to go</title>
+{% endblock %}
+
+{% block content %} 
+     <main>
+          <section class="news">
+               <div class="container">
+                    <div class="page__links">
+                         <a href="./index.html">Главная</a><span class="arrow__link">></span>Блог 
+                    </div>
+                    <div class="title">Блог<br><span>Language to go</span></div>
+
+                    <div class="news__row">
+                         <div class="news__part">
+                              <p class="news__description">Будьте в курсе наших событий. Следите за нашими новостями</p>
+                              <div class="news__grid">
+                                   <div class="news__item">
+                                        <div class="news__item__title">Новая система скидок в Language2GO: успейте забрать максимум!</div>
+                                        <div class="news__item__date">12-07-2022</div>
+                                        <div class="news__item__text">Для многих стоимость изучения иностранного языка является важным критерием при выборе системы обучения. </div>
+                                        <div class="news__item__links">
+                                             <div class="news__item__type">Новость</div>
+                                             <a href="./article.html" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div>
+                                   </div>
+                                   <div class="news__item">
+                                        <div class="news__item__title">“Интерактивная платформа: как это работает?” Отвечает основатель проекта...</div>
+                                        <div class="news__item__date">08-07-2022</div>
+                                        <div class="news__item__text">Моя команда — профессиональные филологи и педагоги-носители языка, преподаватели зарубежных университетов, которые ...</div>
+                                        <div class="news__item__links">
+                                             <div class="news__item__type red__type">Интересное</div>
+                                             <a href="./article.html" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div>
+                                   </div>
+                                   <div class="news__item">
+                                        <div class="news__item__title">Новое слово в изучении иностранных языков: интерактивная платформа ...</div>
+                                        <div class="news__item__date">29-06-2022</div>
+                                        <div class="news__item__text">Для многих стоимость изучения иностранного языка является важным критерием при выборе системы обучения. </div>
+                                        <div class="news__item__links">
+                                             <div class="news__item__type">Новость</div>
+                                             <a href="./article.html" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div>
+                                   </div>
+                                   <div class="news__item">
+                                        <div class="news__item__title">Новая система скидок в Language2GO: успейте забрать максимум!</div>
+                                        <div class="news__item__date">12-07-2022</div>
+                                        <div class="news__item__text">Для многих стоимость изучения иностранного языка является важным критерием при выборе системы обучения. </div>
+                                        <div class="news__item__links">
+                                             <div class="news__item__type">Новость</div>
+                                             <a href="./article.html" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div>
+                                   </div>
+                                   <div class="news__item">
+                                        <div class="news__item__title">“Интерактивная платформа: как это работает?” Отвечает основатель проекта...</div>
+                                        <div class="news__item__date">08-07-2022</div>
+                                        <div class="news__item__text">Моя команда — профессиональные филологи и педагоги-носители языка, преподаватели зарубежных университетов, которые ...</div>
+                                        <div class="news__item__links">
+                                             <div class="news__item__type red__type">Интересное</div>
+                                             <a href="./article.html" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="news__part">
+                              <img src="./img/blog/image.png" alt="blog_image">
+                         </div>
+                    </div>
+
+                    
+               </div>
+          </section>
+     </main>
+{% endblock %}

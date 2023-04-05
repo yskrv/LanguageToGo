@@ -1,0 +1,182 @@
+@import "static/variables";
+@import "static/mixins";
+
+.contact{
+     &__row{
+          @include flex($ai: flex-start);
+          gap: 40px;
+     }
+     &__part{
+          &:first-child{
+               width: 33%;
+          }
+          &:last-child{
+               margin: 0 40px;
+               width: 67%;
+          }
+     }
+     &__title{
+          @include text(24px, 32px, 700, $black);
+          margin-bottom: 12px;
+     }
+     &__text{
+          @include text(16px, 24px, 500, $gray);
+          letter-spacing: 0.02em;
+          margin-bottom: 24px;
+     }
+     &__item{
+          @include flex(flex-start, flex-start);
+          gap: 40px;
+          padding: 35px 40px;
+          background-color: #f9f9f9;
+          border-radius: 20px;
+          margin-bottom: 40px;
+          &:last-child{
+               margin-bottom: 0;
+          }
+          &__title{
+               @include text(20px, 28px, 500, $black);
+               margin-bottom: 8px;
+          }
+          &__subtitle{
+               @include text(16px, 24px, 500, $gray);
+          }
+          &__link{
+               @include text(16px, 24px, 500, $purple);
+               letter-spacing: 0.02em;
+               transition: 0.2s ease;
+               &:hover{
+                    color: $blue;
+               }
+          }
+     }
+     &__socials{
+          i{
+               color: $purple;
+               font-size: 20px;
+               margin-right: 12px;
+               transition: 0.2s ease;
+               &:hover{
+                    color: $blue;
+               }
+          }
+     }
+}
+
+@media screen and (max-width:1440px) {
+     .contact{
+          &__row{
+               gap: 30px;
+          }
+          &__item{
+               padding: 25px 32px;
+               gap: 30px;
+               border-radius: 16px;
+               &__title{
+                    font-size: 18px;
+                    line-height: 24px;
+               }
+               &__subtitle{
+                    font-size: 14px;
+                    line-height: 21px;
+               }
+               &__link{
+                    font-size: 14px;
+                    line-height: 21px;
+               }
+          }
+          &__socials{
+               i{
+                    font-size: 16px;
+               }
+          }
+     }
+}
+
+@media screen and (max-width:960px) {
+     .contact{
+          &__row{
+               flex-direction: column;
+          }
+          &__part{
+               &:first-child{
+                    width: 100%;
+                    @include flex($ai: strach);
+                    gap: 24px;
+               }
+               &:last-child{
+                    margin: 0;
+                    width: 100%;
+               }
+          }
+          &__item{
+               align-items: center;
+               width: calc(100%/3);
+               margin: 0;
+               padding: 16px 20px;
+               gap: 16px;
+               &__title{
+                    font-size: 16px;
+                    line-height: 20px;
+               }
+               &__subtitle{
+                    font-size: 12px;
+                    line-height: 18px;
+               }
+               &__link{
+                    font-size: 12px;
+                    line-height: 18px;
+               }
+          }
+     }
+}
+
+@media screen and (max-width: 750px) {
+     .contact{
+          &__part{
+               &:first-child{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: 
+                    "a b"
+                    "c c";
+               }
+          }
+          &__item{
+               width: 100%;
+               justify-content: center;
+               &:nth-child(1){
+                    grid-area: a;
+               }
+               &:nth-child(2){
+                    grid-area: b;
+               }
+               &:nth-child(3){
+                    width: 50%;
+                    margin: 0 25%;
+                    grid-area: c;
+               }
+          }
+     }
+}
+
+@media screen and (max-width: 520px) {
+     .contact{
+          &__part{
+               &:first-child{
+                    display: flex;
+                    flex-direction: column;
+               }
+          }
+          &__item{
+               width: 280px;
+               margin: 0 auto!important;
+               &:last-child{
+                    width: 280px;
+               }
+               &__link{
+                    display: block;
+               }
+          }
+     }
+}

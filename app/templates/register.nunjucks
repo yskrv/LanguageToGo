@@ -1,0 +1,22 @@
+<section class="register" id="register">
+     <div class="container">
+          <div class="register__row">
+               <div class="register__part">
+                    <h2>Регистрируйтесь и приступайте к первому бесплатному уроку</h2>
+                    <span>Телефон *</span>
+                    <form action="#!" id="lesson__form" class="form">
+                         <input type="tel" class="input__tel" placeholder="+7 (___) ___-__-__" id="phone__input">
+                         <input type="submit" value="Начать обучение" class="btn__tel" id="lesson__open">
+                    </form>
+                    <div class="register__checkbox">
+                         <input type="checkbox" name="check">
+                         <div>Отправляя заявку, я соглашаюсь с <a href="#!">политикой конфиденциальности и пользовательским соглашением</a></div>
+                    </div>
+               </div>
+               <div class="register__part">
+                    <img src="./img/home/register.png" alt="register">
+               </div>
+          </div>
+     </div>
+</section>
+

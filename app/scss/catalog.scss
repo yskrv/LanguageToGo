@@ -1,0 +1,169 @@
+@import "static/variables";
+@import "static/mixins";
+
+.title{
+     margin-bottom: 35px;
+}
+
+.catalog{
+     
+     
+     &__list{
+          @include flex($ai: flex-start);
+     }
+     &__part{
+          &:first-child{
+               width: 75%;
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               grid-gap: 40px;     
+          }
+          &:last-child{
+               position: sticky;
+               top: 0;
+               float: right;
+               width: 25%;
+          }
+     }
+     &__item{
+          padding: 40px;
+          border-radius: 10px;
+
+          .card{
+               &__title{
+                    @include text(26px, 113%, 700, $black);
+                    margin: 20px 0;
+               }
+               &__length{
+                    @include text(16px, 120%, 400, $gray);
+                    margin-bottom: 5px;
+                    span{
+                         font-weight: 700;
+                    }
+               }
+               &__modules{
+                    @include text(16px, 120%, 400, $gray);
+                    margin-bottom: 25px;
+                    span{
+                         font-weight: 700;
+                    }
+               }
+               
+               &__links{
+                    @include flex();
+                    .card__link{
+                         @include text(16px, 24px, 600, $purple);
+                         transition: 0.2s ease;
+                         span{
+                              margin-left: 8px;
+                         }
+                         &:hover{
+                              color: $blue;
+                         }
+                    }
+                    .card__price{
+                         @include text(20px, 22px, 700, $black);
+                    }
+               }
+          }
+     }
+     .level{
+          padding: 30px;
+          margin-bottom: 30px;
+          &__title{
+               @include text(20px, 28px, 500, black);
+               margin-bottom: 20px;
+          }
+          &__row{
+               @include flex($jc: flex-start);
+               @include text(16px, 24px, 500, #333);
+               margin-bottom: 18px;
+          }
+          input[type="checkbox"]{
+               width: 24px;
+               height: 24px;
+               border: 1px solid #BC92C6;
+               border-radius: 4px;
+               margin-right: 17px;
+          }
+     }
+}
+
+.hide{
+     display: none;
+}
+
+@media screen and (max-width:1440px) {
+     .catalog{
+          &__part{
+               &:first-child{
+                    grid-gap: 30px;
+               }
+          }
+          &__item{
+               padding: 30px;
+          }
+     }
+     
+}
+
+@media screen and (max-width:960px) {
+     .catalog{
+          &__list{
+               flex-direction: column-reverse;
+          }
+          &__part{
+               &:first-child{
+                    width: 100%;
+               }
+               &:last-child{
+                    width: 100%;
+                    position: relative;
+               }
+          }
+          .level{
+               padding: 0;
+               margin-bottom: 20px;
+               &__rows{
+                    display: flex;
+                    gap: 30px;
+               }
+               &__row{
+                    margin-bottom: 12px;
+                    font-size: 14px;
+                    input[type="checkbox"]{
+                         width: 18px;
+                         height: 18px;
+                         margin-right: 12px;
+                    }
+               }
+          }
+     }
+}
+
+@media screen and (max-width: 660px) {
+     .catalog{
+          &__part{
+               &:first-child{
+                    grid-template-columns: 1fr;
+               }
+          }
+     }
+}
+
+@media screen and (max-width:440px) {
+     .title{
+          margin-bottom: 20px;
+     }
+}
+
+@media screen and (max-width: 380px) {
+     .catalog{
+          .level{
+               &__rows{
+                    flex-direction: column;
+                    gap: 0;
+               }
+          }
+     }
+}

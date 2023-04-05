@@ -1,0 +1,287 @@
+@import "static/variables";
+@import "static/mixins";
+
+.course{
+     margin-bottom: $mb;
+     &__subtitle{
+          @include text(32px, 54px, 900, $black);
+          margin-bottom: 30px;
+     }
+     &__row{
+          @include flex($ai: flex-start);
+          gap: 40px;
+     }
+     &__part{
+          &:first-child{
+               width: 67%;
+          }
+          &:last-child{
+               position: sticky;
+               float: right;
+               top: 20px;
+               width: 33%;
+          }
+     }
+     .about{
+          border-bottom: 1px solid $lightBlue;
+          .title{
+               margin-bottom: 30px;
+          }
+          &__after{
+               @include text(20px, 28px, 500, $purple);
+               letter-spacing: 0.01em;
+          }
+          &__after__list{
+               margin-bottom: 30px;
+          }
+          &__after__item{
+               @include text(18px, 24px, 500, $gray);
+               letter-spacing: 0.01em;
+               margin-top: 16px;
+          }
+          &__for{
+               @include text(16px, 24px, 500, #333);
+               display: inline-block;
+               padding: 4px 20px;
+               border-radius: 4px;
+               background-color: $lightBlue;
+               margin-bottom: 40px;
+          }
+     }
+     .program{
+          padding-top: 40px;
+          margin-bottom: 50px;
+          &__lesson{
+               padding: 24px 27px;
+               border: 1px solid $lightBlue;
+               border-radius: 20px;
+               background-color: #f9f9f9;
+               letter-spacing: 0.02em;
+               margin-bottom: 28px;
+               &:last-child{
+                    margin-bottom: 0;
+               }
+               &__show{
+                    display: block !important;
+               }          
+               &__fadein{
+                    animation: lesson__fadein 0.8s ease;
+               }
+               @keyframes lesson__fadein {
+                    from{
+                         opacity: 0;
+                    }
+                    to{
+                         opacity: 1;
+                    }
+               }
+               &__fadeout{
+                    animation: lesson__fadeout 0.3s ease;
+               }
+               @keyframes lesson__fadeout {
+                    from{
+                         opacity: 1;
+                    }
+                    to{
+                         opacity: 0;
+                    }
+               }
+               &__title{
+                    @include flex();
+                    div:first-child{
+                         @include text(16px, 24px, 600, $black);
+                         span{
+                              color: $purple;
+                              margin-right: 8px;
+                         }
+                    }
+                    div:last-child{
+                         @include flex($jc: flex-end);
+                         @include text(16px, 24px, 500, $gray);
+                         i{
+                              transition: 0.4s ease;
+                              margin-left: 10px;
+                              font-size: 24px;
+                         }
+                    }
+                    .active__lesson__btn{
+                         transform: rotate(180deg);
+                    }
+               }
+               &__text{
+                    display: none;
+                    p{
+                         @include text(16px, 24px, 500, #000);
+                    }
+               }
+               &__border{
+                    margin: 24px 0;
+                    height: 2px;
+                    background-color: #641F76;
+               }
+          }
+     }
+     .buying{
+          padding: 40px;
+          background-color: $lightBlue;
+          border-radius: 20px;
+          margin-bottom: 50px;
+          &__row{
+               @include flex();
+               margin-bottom: 16px;
+          }
+          &__part{
+               @include text(16px, 24px, 500, $darkGray);
+               span{
+                    display: block;
+                    @include text(32px, 44px, 900, $darkGray);
+               }
+          }
+          &__item{
+               @include text(16px, 24px, 500, $darkGray);
+               margin-bottom: 16px;
+               span{
+                    font-weight: 700;
+                    margin-right: 10px;
+               }
+          }
+          &__btn{
+               width: 100%;
+               text-align: center;
+          }
+     }
+     .top{
+          .course__subtitle{
+               margin-bottom: 32px;
+          }
+          &__item{
+               @include flex();
+               padding: 12px 16px;
+               border: 1px solid #EFEFFF;
+               box-shadow: 0px 4px 20px #F7F6FB;
+               border-radius: 20px;
+               margin-bottom: 16px;
+          }
+          &__part{
+               @include flex($jc: flex-start);
+               @include text(16px, 24px, 500, black);
+          }
+          &__place{
+               width: 24px;
+               height: 24px;
+               margin-right: 12px;
+               background-color: $lightBlue;
+               @include flex($jc: center);
+               border-radius: 100%;
+          }
+          &__grade{
+               background: $gradient;
+               background-clip: text;
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+          }
+          &__open__close{
+               @include text(16px, 24px,  500, $blue);
+               transition: 0.25s ease;
+               &:hover{
+                    cursor: pointer;
+                    color: $purple;
+               }
+          }
+          &__none{
+               display: none;
+          }
+     }
+     .howitworks{
+          margin-bottom: 50px;
+          .course__subtitle{
+               margin-bottom: 32px;
+          }
+          &__item{
+               padding: 40px;
+               gap: 40px;
+               @include flex($jc: flex-start);
+               margin-bottom: 16px;
+               &__title{
+                    @include text(24px, 32px, 700, $black);
+               }
+               &__subtitle{
+                    @include text(16px, 24px, 400, $lightGray);
+               }
+               &:last-child{
+                    margin-bottom: 0;
+               }
+          }
+     }
+     .comments{
+          margin-bottom: 50px;
+          .course__subtitle{
+               margin-bottom: 0;
+          }
+          &__row{
+               @include flex();
+               margin-bottom: 32px;
+          }
+
+     }
+}
+
+.similar{
+     &__row{
+          @include flex();
+     }
+}
+
+@media screen and (max-width:1440px) {
+     .course{
+          &__subtitle{
+               font-size: 26px;
+               line-height: 32px;
+               margin-bottom: 24px;
+          }
+          &__row{
+               gap: 30px;
+          }
+          &__part{
+               &:last-child{
+                    .buying{
+                         padding: 30px;
+                    }
+               }
+          }
+     }
+     .howitworks{
+          &__item{
+               padding: 0 !important;
+               margin-bottom: 30px !important;
+          }
+     }
+}
+
+@media screen and (max-width:1200px) {
+     .about{
+          &__after{
+               &__item{
+                    font-size: 16px;
+               }
+          }
+     }
+     .program{
+          &__lesson{
+               &__title{
+                    div{
+                         &:last-child{
+                              .lesson__btn{
+                                   display: block;
+                                   width: 24px;
+                                   height: 24px;
+                                   i{
+                                        color: #000 !important;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}

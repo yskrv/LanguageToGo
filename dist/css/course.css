@@ -1,0 +1,317 @@
+.course {
+  margin-bottom: 100px;
+}
+.course__subtitle {
+  font-size: 32px;
+  line-height: 54px;
+  font-weight: 900;
+  color: #232323;
+  margin-bottom: 30px;
+}
+.course__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+.course__part:first-child {
+  width: 67%;
+}
+.course__part:last-child {
+  position: sticky;
+  float: right;
+  top: 20px;
+  width: 33%;
+}
+.course .about {
+  border-bottom: 1px solid #EFEFFF;
+}
+.course .about .title {
+  margin-bottom: 30px;
+}
+.course .about__after {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #78258D;
+  letter-spacing: 0.01em;
+}
+.course .about__after__list {
+  margin-bottom: 30px;
+}
+.course .about__after__item {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #585858;
+  letter-spacing: 0.01em;
+  margin-top: 16px;
+}
+.course .about__for {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  padding: 4px 20px;
+  border-radius: 4px;
+  background-color: #EFEFFF;
+  margin-bottom: 40px;
+}
+.course .program {
+  padding-top: 40px;
+  margin-bottom: 50px;
+}
+.course .program__lesson {
+  padding: 24px 27px;
+  border: 1px solid #EFEFFF;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+.course .program__lesson:last-child {
+  margin-bottom: 0;
+}
+.course .program__lesson__show {
+  display: block !important;
+}
+.course .program__lesson__fadein {
+  animation: lesson__fadein 0.8s ease;
+}
+@keyframes lesson__fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.course .program__lesson__fadeout {
+  animation: lesson__fadeout 0.3s ease;
+}
+@keyframes lesson__fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.course .program__lesson__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course .program__lesson__title div:first-child {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #232323;
+}
+.course .program__lesson__title div:first-child span {
+  color: #78258D;
+  margin-right: 8px;
+}
+.course .program__lesson__title div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #585858;
+}
+.course .program__lesson__title div:last-child i {
+  transition: 0.4s ease;
+  margin-left: 10px;
+  font-size: 24px;
+}
+.course .program__lesson__title .active__lesson__btn {
+  transform: rotate(180deg);
+}
+.course .program__lesson__text {
+  display: none;
+}
+.course .program__lesson__text p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #000;
+}
+.course .program__lesson__border {
+  margin: 24px 0;
+  height: 2px;
+  background-color: #641F76;
+}
+.course .buying {
+  padding: 40px;
+  background-color: #EFEFFF;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.course .buying__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.course .buying__part {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #333;
+}
+.course .buying__part span {
+  display: block;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 900;
+  color: #333;
+}
+.course .buying__item {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 16px;
+}
+.course .buying__item span {
+  font-weight: 700;
+  margin-right: 10px;
+}
+.course .buying__btn {
+  width: 100%;
+  text-align: center;
+}
+.course .top .course__subtitle {
+  margin-bottom: 32px;
+}
+.course .top__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #EFEFFF;
+  box-shadow: 0px 4px 20px #F7F6FB;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.course .top__part {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: black;
+}
+.course .top__place {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  background-color: #EFEFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.course .top__grade {
+  background: linear-gradient(135deg, #2E90D1 0%, #78258D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.course .top__open__close {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #2E90D1;
+  transition: 0.25s ease;
+}
+.course .top__open__close:hover {
+  cursor: pointer;
+  color: #78258D;
+}
+.course .top__none {
+  display: none;
+}
+.course .howitworks {
+  margin-bottom: 50px;
+}
+.course .howitworks .course__subtitle {
+  margin-bottom: 32px;
+}
+.course .howitworks__item {
+  padding: 40px;
+  gap: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.course .howitworks__item__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #232323;
+}
+.course .howitworks__item__subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #828282;
+}
+.course .howitworks__item:last-child {
+  margin-bottom: 0;
+}
+.course .comments {
+  margin-bottom: 50px;
+}
+.course .comments .course__subtitle {
+  margin-bottom: 0;
+}
+.course .comments__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.similar__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+  .course__subtitle {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+  .course__row {
+    gap: 30px;
+  }
+  .course__part:last-child .buying {
+    padding: 30px;
+  }
+  .howitworks__item {
+    padding: 0 !important;
+    margin-bottom: 30px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .about__after__item {
+    font-size: 16px;
+  }
+  .program__lesson__title div:last-child .lesson__btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+  .program__lesson__title div:last-child .lesson__btn i {
+    color: #000 !important;
+  }
+}
+/*# sourceMappingURL=course.css.map */

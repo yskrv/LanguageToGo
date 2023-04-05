@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+     <link rel="stylesheet" href="./css/style.css">
+     
+     <link rel="stylesheet" href="./css/catalog.css">
+     <script defer src="./js/catalog.js"></script>
+     <title>Каталог - Language to go</title>
+
+     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+     <script src="https://use.fontawesome.com/ab2012437d.js"></script>
+</head>
+<body>
+     <div class="modal__container" id="login__modal">
+          <div class="modal modal__blue">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true" id="close"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/support/support_item.png" alt="register">
+                    </div>
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Авторизация</div>
+                         <form action="#!">
+                              <label>E-mail</label>
+                              <input type="text" name="email" placeholder="Введите e-mail">
+                              <label>Пароль</label>
+                              <input type="text" name="email" placeholder="Введите пароль">
+                              <input type="submit" value="Войти" id="login__btn">
+                         </form>
+                         <p>Если у вас нет аккаунта: <span id="register__open" class="link">Регистрация</span></p>
+                    </div>    
+               </div>
+          </div>
+     </div>
+     <div class="modal__container" id="register__modal">
+          <div class="modal modal__red">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Регистрация</div>
+                         <form action="#!">
+                              <label>Имя</label>
+                              <input type="text" name="name" placeholder="Введите имя">
+                              <label>Фамилия</label>
+                              <input type="text" name="surname" placeholder="Введите фамилию">
+                              <label>E-mail</label>
+                              <input type="text" name="email" placeholder="Введите e-mail">
+                              <label>Пароль</label>
+                              <input type="text" name="email" placeholder="Введите пароль">
+                              <input type="submit" value="Зарегистрироваться" id="register__btn">
+                         </form>
+                         <p>Если у вас уже есть аккаунт: <span id="login__open" class="link">Авторизация</span></p>
+                    </div> 
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/home/promo.png" alt="register">
+                    </div>   
+               </div>
+          </div>
+     </div>
+     <div class="modal__container" id="lesson__modal">
+          <div class="modal modal__light">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Вы успешно зарегистрировались на бесплатный урок!</div>
+                         <p></p>
+                    </div> 
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/blog/image.png" alt="phone">
+                    </div>   
+               </div>
+          </div>
+     </div>
+     <div class="modal__container" id="support__modal">
+          <div class="modal modal__blue">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/home/faq.png" alt="support">
+                    </div> 
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Спасибо за обратную связь! В скором времени с вами свяжутся наши сотрудники.</div>
+                    </div> 
+               </div>
+          </div>
+     </div>
+     <header>
+          <nav>
+               <div class="nav__part">
+                    <a href="./index.html" class="nav__logo"><img src="./img/logo.png" alt="logo"></a>
+                    <a href="./catalog.html" class="nav__link">Курсы</a>
+                    <a href="./about_us.html" class="nav__link">О нас</a>
+                    <a href="./news.html" class="nav__link">Блог</a>
+                    <div class="nav__link other__links">
+                         Еще <i class="fa fa-angle-down" aria-hidden="true"></i>
+                         <div class="dropmenu">
+                              <a href="./faq.html" class="nav__link">FAQ</a>
+                              <a href="./contact.html" class="nav__link">Контакты</a>
+                              <a href="./support.html" class="nav__link">Служба поддержки</a>
+                         </div>
+                    </div>
+                    
+                    <a href="./faq.html" class="nav__link nonactive__link">FAQ</a>
+                    <a href="./contact.html" class="nav__link nonactive__link">Контакты</a>
+                    <a href="./support.html" class="nav__link nonactive__link">Служба поддержки</a>
+               </div>
+               <div class="nav__part">
+                    <div class="nav__btn" id="login">Войти</div>
+                    <div class="menu-icon-wrapper">
+                         <div class="menu-icon"></div>
+                    </div>
+               </div>
+          </nav>
+          <div class="mobile__menu">
+               <div class="mobile__menu__part">
+                    <a href="./catalog.html" class="nav__link">Курсы</a>
+                    <a href="./about_us.html" class="nav__link">О нас</a>
+                    <a href="./news.html" class="nav__link">Блог</a>
+                    <a href="./faq.html" class="nav__link">FAQ</a>
+                    <a href="./contact.html" class="nav__link">Контакты</a>
+                    <a href="./support.html" class="nav__link">Служба поддержки</a>
+               </div>
+               <div class="mobile__menu__part">
+                    <div class="nav__btn" id="login__mob">Войти</div>
+               </div>
+          </div>
+     </header>
+      
+     <main>
+          <section class="catalog">
+               <div class="container">
+                    <div class="page__links">
+                         <a href="./index.html">Главная</a><span class="arrow__link">></span>Каталог 
+                    </div>
+                    <div class="title">Каталог</div>
+                    <div class="catalog__btns">
+                         <div class="catalog__btn active__btn" id="all">Все</div>
+                         <div class="catalog__btn" id="china">Китайский</div>
+                         <div class="catalog__btn" id="german">Немецский</div>
+                         <div class="catalog__btn" id="spain">Испанский</div>
+                    </div>
+                    <div class="catalog__list">
+                         <div class="catalog__part">
+                              <div class="catalog__item blue german">
+                                   <img src="./img/languages/german.png" alt="german">
+                                   <div class="card__title">Немецкий для начального уровня</div>
+                                   <div class="card__length">Длительность: <span>42 часов</span></div>
+                                   <div class="card__modules">Модули: <span>3</span></div>
+                                   <div class="card__links">
+                                        <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </span></a>
+                                        <div class="card__price">От 6250р</div>
+                                   </div>
+                              </div>
+                              <div class="catalog__item red china">
+                                   <img src="./img/languages/china.png" alt="china">
+                                   <div class="card__title">Китайский для среднего уровня</div>
+                                   <div class="card__length">Длительность: <span>54 часов</span></div>
+                                   <div class="card__modules">Модули: <span>4</span></div>
+                                   <div class="card__links">
+                                        <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </span></a>
+                                        <div class="card__price">От 9450р</div>
+                                   </div>
+                              </div>
+                              <div class="catalog__item light spain">
+                                   <img src="./img/languages/spain.png" alt="spain">
+                                   <div class="card__title">Испанский для среднего уровня</div>
+                                   <div class="card__length">Длительность: <span>36 часов</span></div>
+                                   <div class="card__modules">Модули: <span>2</span></div>
+                                   <div class="card__links">
+                                        <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </span></a>
+                                        <div class="card__price">От 4890р</div>
+                                   </div>
+                              </div>
+                              <div class="catalog__item blue china">
+                                   <img src="./img/languages/china.png" alt="сhina">
+                                   <div class="card__title">Китайский для продвинутого уровня</div>
+                                   <div class="card__length">Длительность: <span>84 часов</span></div>
+                                   <div class="card__modules">Модули: <span>3</span></div>
+                                   <div class="card__links">
+                                        <a href!="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </span></a>
+                                        <div class="card__price">От 8250р</div>
+                                   </div>
+                              </div>
+                              <div class="catalog__item red spain">
+                                   <img src="./img/languages/spain.png" alt="spain">
+                                   <div class="card__title">Испанский для начального уровня</div>
+                                   <div class="card__length">Длительность: <span>36 часов</span></div>
+                                   <div class="card__modules">Модули: <span>2</span></div>
+                                   <div class="card__links">
+                                        <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </span></a>
+                                        <div class="card__price">От 3990р</div>
+                                   </div>
+                              </div>
+                              <div class="catalog__item light german">
+                                   <img src="./img/languages/german.png" alt="german">
+                                   <div class="card__title">Немецкий для среднего уровня</div>
+                                   <div class="card__length">Длительность: <span>56 часов</span></div>
+                                   <div class="card__modules">Модули: <span>3</span></div>
+                                   <div class="card__links">
+                                        <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </span></a>
+                                        <div class="card__price">От 7890р</div>
+                                   </div>
+                              </div>
+                              <div class="catalog__item light spain">
+                                   <img src="./img/languages/spain.png" alt="spain">
+                                   <div class="card__title">Испанский для продвинутого уровня</div>
+                                   <div class="card__length">Длительность: <span>84 часов</span></div>
+                                   <div class="card__modules">Модули: <span>5</span></div>
+                                   <div class="card__links">
+                                        <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </span></a>
+                                        <div class="card__price">От 13490р</div>
+                                   </div>
+                              </div>
+                              <div class="catalog__item blue german">
+                                   <img src="./img/languages/german.png" alt="german">
+                                   <div class="card__title">Немецский для продвинутого уровня</div>
+                                   <div class="card__length">Длительность: <span>63 часов</span></div>
+                                   <div class="card__modules">Модули: <span>4</span></div>
+                                   <div class="card__links">
+                                        <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </span></a>
+                                        <div class="card__price">От 8690р</div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="catalog__part">
+                              <div class="level">
+                                   <div class="level__title">Уровень</div>
+                                   <div class="level__rows">
+                                        <div class="level__row">
+                                             <input type="checkbox" name="level"> Начальный
+                                        </div>
+                                        <div class="level__row">
+                                             <input type="checkbox" name="level"> Средний
+                                        </div>
+                                        <div class="level__row">
+                                             <input type="checkbox" name="level"> Высокий
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </main>
+
+
+     <footer class="footer">
+          <div class="container">
+               <div class="footer__row">
+                    <div class="footer__part">
+                         <img src="./img/footer__logo.png" alt="footer__logo" class="footer__logo">
+                         <p class="footer__text">Language2Go — интерактивная платформа для легкого, удобного и быстрого изучения иностранных языков.</p>
+                         <div class="footer__brands">
+                              <img src="./img/visa.png" alt="visa">
+                              <img src="./img/master__card.png" alt="master__card">
+                              <img src="./img/mir.png" alt="mir">
+                         </div>
+                    </div>
+                    <div class="footer__part">
+                         <div class="footer__title">Обучение</div>
+                         <a href="./catalog.html" class="footer__link">Все языки</a>
+                         <a href="./catalog.html" class="footer__link">Взрослым</a>
+                         <a href="./catalog.html" class="footer__link">Детям и подросткам</a>
+                         <a href="./catalog.html" class="footer__link">Мини-курсы</a>
+                         <a href="./catalog.html" class="footer__link">Тренажеры</a>
+                         <a href="./catalog.html" class="footer__link">Индивидуальные занятия</a>
+                    </div>
+                    <div class="footer__part">
+                         <div class="footer__title">Информация</div>
+                         <a href="./about_us.html" class="footer__link">О нас</a>
+                         <a href="./news.html" class="footer__link">Новости</a>
+                         <a href="./faq.html" class="footer__link">Частые вопросы</a>
+                         <a href="./contact.html" class="footer__link">Контакты</a>
+                         <a href="./support.html" class="footer__link">Служба поддержки</a>
+                    </div>
+                    <div class="footer__part">
+                         <div class="footer__title">Контакты</div>
+                         <div class="footer__phone">+7 (495) 156-35-50</div>
+                         <div class="footer__contact">info@language2go.ru<br>support@language2go.ru</div>
+                         <div class="footer__contact">101000, Москва, Россия</div>
+                         <div class="footer__socials">
+                              <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://vk.com/?s" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                              </a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </footer>
+     <div class="footer__bottom">
+          <div class="container">
+               <div class="footer__bottom__row">
+                    <div class="footer__bottom__part">
+                         <div>&copy; 2022 Language to go</div>
+                    </div>
+                    <div class="footer__bottom__part">
+                         <a href="#!">Праровая оговорка</a>
+                         <a href="#!">Пользовательское соглашение</a>
+                         <a href="#!">Политика конфиденциальности</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <script src="./js/script.js"></script>
+</body>
+</html>

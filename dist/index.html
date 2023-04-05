@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+     <link rel="stylesheet" href="./css/style.css">
+     
+     <link rel="stylesheet" href="./css/main.css">
+     <script defer src="./js/main.js"></script>
+     <title>Language to go</title>
+
+     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+     <script src="https://use.fontawesome.com/ab2012437d.js"></script>
+</head>
+<body>
+     <div class="modal__container" id="login__modal">
+          <div class="modal modal__blue">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true" id="close"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/support/support_item.png" alt="register">
+                    </div>
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Авторизация</div>
+                         <form action="#!">
+                              <label>E-mail</label>
+                              <input type="text" name="email" placeholder="Введите e-mail">
+                              <label>Пароль</label>
+                              <input type="text" name="email" placeholder="Введите пароль">
+                              <input type="submit" value="Войти" id="login__btn">
+                         </form>
+                         <p>Если у вас нет аккаунта: <span id="register__open" class="link">Регистрация</span></p>
+                    </div>    
+               </div>
+          </div>
+     </div>
+     <div class="modal__container" id="register__modal">
+          <div class="modal modal__red">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Регистрация</div>
+                         <form action="#!">
+                              <label>Имя</label>
+                              <input type="text" name="name" placeholder="Введите имя">
+                              <label>Фамилия</label>
+                              <input type="text" name="surname" placeholder="Введите фамилию">
+                              <label>E-mail</label>
+                              <input type="text" name="email" placeholder="Введите e-mail">
+                              <label>Пароль</label>
+                              <input type="text" name="email" placeholder="Введите пароль">
+                              <input type="submit" value="Зарегистрироваться" id="register__btn">
+                         </form>
+                         <p>Если у вас уже есть аккаунт: <span id="login__open" class="link">Авторизация</span></p>
+                    </div> 
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/home/promo.png" alt="register">
+                    </div>   
+               </div>
+          </div>
+     </div>
+     <div class="modal__container" id="lesson__modal">
+          <div class="modal modal__light">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Вы успешно зарегистрировались на бесплатный урок!</div>
+                         <p></p>
+                    </div> 
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/blog/image.png" alt="phone">
+                    </div>   
+               </div>
+          </div>
+     </div>
+     <div class="modal__container" id="support__modal">
+          <div class="modal modal__blue">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/home/faq.png" alt="support">
+                    </div> 
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Спасибо за обратную связь! В скором времени с вами свяжутся наши сотрудники.</div>
+                    </div> 
+               </div>
+          </div>
+     </div>
+     <header>
+          <nav>
+               <div class="nav__part">
+                    <a href="./index.html" class="nav__logo"><img src="./img/logo.png" alt="logo"></a>
+                    <a href="./catalog.html" class="nav__link">Курсы</a>
+                    <a href="./about_us.html" class="nav__link">О нас</a>
+                    <a href="./news.html" class="nav__link">Блог</a>
+                    <div class="nav__link other__links">
+                         Еще <i class="fa fa-angle-down" aria-hidden="true"></i>
+                         <div class="dropmenu">
+                              <a href="./faq.html" class="nav__link">FAQ</a>
+                              <a href="./contact.html" class="nav__link">Контакты</a>
+                              <a href="./support.html" class="nav__link">Служба поддержки</a>
+                         </div>
+                    </div>
+                    
+                    <a href="./faq.html" class="nav__link nonactive__link">FAQ</a>
+                    <a href="./contact.html" class="nav__link nonactive__link">Контакты</a>
+                    <a href="./support.html" class="nav__link nonactive__link">Служба поддержки</a>
+               </div>
+               <div class="nav__part">
+                    <div class="nav__btn" id="login">Войти</div>
+                    <div class="menu-icon-wrapper">
+                         <div class="menu-icon"></div>
+                    </div>
+               </div>
+          </nav>
+          <div class="mobile__menu">
+               <div class="mobile__menu__part">
+                    <a href="./catalog.html" class="nav__link">Курсы</a>
+                    <a href="./about_us.html" class="nav__link">О нас</a>
+                    <a href="./news.html" class="nav__link">Блог</a>
+                    <a href="./faq.html" class="nav__link">FAQ</a>
+                    <a href="./contact.html" class="nav__link">Контакты</a>
+                    <a href="./support.html" class="nav__link">Служба поддержки</a>
+               </div>
+               <div class="mobile__menu__part">
+                    <div class="nav__btn" id="login__mob">Войти</div>
+               </div>
+          </div>
+     </header>
+      
+     <main>
+          <section class="header">
+               <div class="container">
+                    <div class="header__list">
+                         <div class="header__part">
+                              <div class="lan_to_go">Language to go</div>
+                              <h1>Онлайн-школа иностранных языков</h1>
+                              <p>Достигайте своих целей с помощью авторских игровых методик от носителей языка</p>
+                              <div class="header__btns">
+                                   <a href="./catalog.html" class="header__btn btn">Попробовать бесплатно</a>
+                                   <div class="header__btn">
+                                        <div class="play"><img src="./img/home/play.png" alt="play_btn"></div>
+                                        <span>Посмотреть промо-ролик</span>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="header__part">
+                              <img src="./img/home/header_icon.png" alt="header_icon">
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section class="all__courses">
+               <div class="container">
+                    <div class="all__courses__title">
+                         <h2 class="title">Курсы иностранных языков для любого уровня</h2>
+                         <div>
+                              <a href="./catalog.html" class="btn__inverse">Все курсы</a>
+                              <div class="slider__btns">
+                                   <div class="slider__btn" id="prev__btn">
+                                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                   </div>
+                                   <div class="slider__btn" id="next__btn">
+                                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="all__courses__slider">
+                              <div class="all__courses__row">
+                                   <div class="all__courses__card blue">
+                                        <div class="card__logo">
+                                             <img src="./img/languages/german.png" alt="german">
+                                             <div class="card__title">Немецкий для начального уровня</div>
+                                             <div class="card__length">Длительность: <span>42 часов</span></div>
+                                             <div class="card__modules">Модули: <span>3</span></div>
+                                             <div class="card__links">
+                                                  <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                  </span></a>
+                                                  <div class="card__price">От 6250р</div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="all__courses__card red">
+                                        <div class="card__logo">
+                                             <img src="./img/languages/china.png" alt="china">
+                                             <div class="card__title">Китайский для среднего уровня</div>
+                                             <div class="card__length">Длительность: <span>54 часов</span></div>
+                                             <div class="card__modules">Модули: <span>4</span></div>
+                                             <div class="card__links">
+                                                  <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                  </span></a>
+                                                  <div class="card__price">От 9450р</div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="all__courses__card light">
+                                        <div class="card__logo">
+                                             <img src="./img/languages/spain.png" alt="spain">
+                                             <div class="card__title">Испанский для среднего уровня</div>
+                                             <div class="card__length">Длительность: <span>36 часов</span></div>
+                                             <div class="card__modules">Модули: <span>2</span></div>
+                                             <div class="card__links">
+                                                  <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                  </span></a>
+                                                  <div class="card__price">От 4890р</div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="all__courses__card blue">
+                                        <div class="card__logo">
+                                             <img src="./img/languages/china.png" alt="сhina">
+                                             <div class="card__title">Китайский для продвинутого уровня</div>
+                                             <div class="card__length">Длительность: <span>84 часов</span></div>
+                                             <div class="card__modules">Модули: <span>3</span></div>
+                                             <div class="card__links">
+                                                  <a href!="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                  </span></a>
+                                                  <div class="card__price">От 8250р</div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="all__courses__card red">
+                                        <div class="card__logo">
+                                             <img src="./img/languages/spain.png" alt="spain">
+                                             <div class="card__title">Испанский для начального уровня</div>
+                                             <div class="card__length">Длительность: <span>36 часов</span></div>
+                                             <div class="card__modules">Модули: <span>2</span></div>
+                                             <div class="card__links">
+                                                  <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                  </span></a>
+                                                  <div class="card__price">От 3990р</div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="all__courses__card light">
+                                        <div class="card__logo">
+                                             <img src="./img/languages/german.png" alt="german">
+                                             <div class="card__title">Немецкий для среднего уровня</div>
+                                             <div class="card__length">Длительность: <span>56 часов</span></div>
+                                             <div class="card__modules">Модули: <span>3</span></div>
+                                             <div class="card__links">
+                                                  <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                  </span></a>
+                                                  <div class="card__price">От 7890р</div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                    </div>
+               </div>
+          </section>
+
+          <section class="whom">
+               <img src="./img/home/bg_message.png" alt="bg__message" class="bg__message">
+               <div class="container">
+                    <div class="whom__list">
+                         <div class="whom__title">
+                              <h2 class="title">Кому подойдет <span>L2GO</span></h2>
+                              <p><span>Language to go</span> подойдет всем, кто хочет за короткий срок качественно изменить свою жизнь, освоив иностранный язык.</p>
+                              <a href="./catalog.html" class="whom__btn btn">Попробовать бесплатно</a>
+                         </div>
+                         <div class="whom__content">
+                              <div class="whom__content__row">
+                                   <div class="whom__content__item">
+                                        <div class="item__logo"><img src="./img/home/el-1.png"></div>
+                                        <div>
+                                             <div class="item__title">Школьникам</div>
+                                             <div class="item__text">Сдать выпускные экзамены или поступить в ВУЗ.</div>
+                                        </div>
+                                   </div>
+                                   <div class="whom__content__item">
+                                        <div class="item__logo"><img src="./img/home/el-2.png"></div>
+                                        <div>
+                                             <div class="item__title">Студентом</div>
+                                             <div class="item__text">Переехать на обучение в другую страну или найти высокооплачеваемую работу</div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="whom__content__row">
+                                   <div class="whom__content__item">
+                                        <div class="item__logo"><img src="./img/home/el-3.png"></div>
+                                        <div>
+                                             <div class="item__title">Эмигрантам</div>
+                                             <div class="item__text">Адаптироваться в новой стране, создать конкурентное преимущество и трудоустроиться</div>
+                                        </div>
+                                   </div>
+                                   <div class="whom__content__item">
+                                        <div class="item__logo"><img src="./img/home/el-4.png"></div>
+                                        <div>
+                                             <div class="item__title">Общительным</div>
+                                             <div class="item__text">Создать счастливую семью с иностранцем и интегрироваться в новое общество</div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="whom__content__row">
+                                   <div class="whom__content__item">
+                                        <div class="item__logo"><img src="./img/home/el-5.png"></div>
+                                        <div>
+                                             <div class="item__title">Бизнесменам</div>
+                                             <div class="item__text">Завести полезные знакомства среди иностранцев и масштабировать бизнес</div>
+                                        </div>
+                                   </div>
+                                   <div class="whom__content__item">
+                                        <div class="item__logo"><img src="./img/home/el-6.png"></div>
+                                        <div>
+                                             <div class="item__title">Путешественникам</div>
+                                             <div class="item__text">Свободно общаться и находить новых друзей, решать бытовые вопросы и спорные ситуации</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section class="why">
+               <div class="container">
+                    <h2 class="title">Почему вы быстро освоите язык</h2>
+                    <div class="why__row">
+                         <div class="why__item">
+                              <div class="why__item__number blue">01</div>
+                              <div class="why__item__title">Интересные уроки</div>
+                              <div class="why__item__text">Короткие, но насыщенные уроки до 45 минут.<br><br>Более глубокий объем знаний, чем в других школах и даже чем предусмотрено международными стандартами.</div>
+                         </div>
+                         <div class="why__item">
+                              <img src="./img/home/why_item-1.png" alt="why__item-1">
+                         </div>
+                    </div>
+                    <div class="why__row">
+                         <div class="why__item">
+                              <img src="./img/home/why_item-2.png" alt="why__item-2">
+                         </div>
+                         <div class="why__item">
+                              <div class="why__item__number purple">02</div>
+                              <div class="why__item__title">Общение с другими<br>учащимися</div>
+                              <div class="why__item__text">Внутренний видеочат для общения с единомышленниками и отработки материала. Завести новых друзей по интересам просто.</div>
+                         </div>
+                    </div>
+                    <div class="why__row">
+                         <div class="why__item">
+                              <div class="why__item__number red">03</div>
+                              <div class="why__item__title">Удобный формат обучения</div>
+                              <div class="why__item__text">Полностью автоматический процесс обучения на одной платформе с доступом на любом устройстве.</div>
+                              <a href="./catalog.html" class="why__btn btn">Начать обучение</a>
+
+                         </div>
+                         <div class="why__item">
+                              <img src="./img/home/why_item-3.png" alt="why__item-3">
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section class="promo">
+               <div class="container">
+                    <div class="promo__row">
+                         <div class="promo__part">
+                              <img src="./img/home/promo.png" alt="promo">
+                         </div>
+                         <div class="promo__part">
+                              <div class="promo__title">Эффективная методика изучения языка <span>L2GO</span></div>
+                              <div class="promo__bullet">
+                                   <div></div>
+                                   <p>Самостоятельно выбираете удобный режим и время прохождения заданий</p>
+                              </div>
+                              <div class="promo__bullet">
+                                   <div></div>
+                                   <p>Cовременная эффективная методика обучения гарантирует освоение языка на максимально высоком уровне за короткий срок </p>
+                              </div>
+                              <div class="promo__bullet">
+                                   <div></div>
+                                   <p>Полная автоматизация позволяет нам предоставлять самую низку цену - в 2, 3, а то и в 5 раз дешевле других языковых школ.</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section class="testimonials">
+               <div class="container">
+                    <div class="testimonials__title">
+                         <div class="title">Что о нас говорят ученики?</div>
+                         <a href="#!" class="testimonials__btn btn__inverse">Все отзывы</a>
+                    </div>
+                    <div class="testimonials__row">
+                         <div class="testimonials__part">
+                              <img src="./img/home/testimonials.png" alt="testimonials">
+                         </div>
+                         <div class="testimonials__part">
+                              <div class="testimonials__slider">
+                                   <div class="testimonials__slider__list">
+                                        <div class="testimonials__slider__item show red">
+                                             <div class="comment__author__stars">
+                                                  <div class="comment__author">Артем М. <br><span>Студент</span></div>
+                                                  <div class="comment__stars">
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                             <div class="comment__text">
+                                                  Занятия курса очень понравились, в основном благодаря необычной системе — я человек настроения и не могу подстраиваться под график индивидуального репетитора или тем более целой группы. Иногда занимался несколько часов подряд — настолько легко и интересно организована подача материала, а один раз по болезни пропустил целую неделю. 
+                                             </div>
+                                        </div>
+                                        <div class="testimonials__slider__item blue">
+                                             <div class="comment__author__stars">
+                                                  <div class="comment__author">Виктория Б. <br><span>Студент</span></div>
+                                                  <div class="comment__stars">
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                             <div class="comment__text">
+                                                  Первое пробное занятие прошло отлично. Все мои пожелания по педагогу были полностью учтены. На занятии был определен мой уровень владения языком и оговорены многие нюансы, относительно адаптации курсы лично под меня, мои цели и интересы. Уже вижу хороший результат, в том числе, активно применяю знания на работе. Рекомендую обратиться за помощью к данной онлайн школе.
+                                             </div>
+                                        </div>
+                                        <div class="testimonials__slider__item light">
+                                             <div class="comment__author__stars">
+                                                  <div class="comment__author">Евгений Ш. <br><span>Студент</span></div>
+                                                  <div class="comment__stars">
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star" aria-hidden="true"></i>
+                                                       <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                             <div class="comment__text">
+                                                  Уроки с преподавателем проходят на удобной платформе. На проверку домашнее задание отправляю заранее перед уроком, чтобы преподаватель успел проверить и только после этого на уроке обсуждаем возникшие вопросы. И что самое важное для меня, большая часть урока посвящена речи. Очень много говоришь, барьер ломается и хочется говорить еще больше ))
+
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="testimonials__slider__dots">
+                                        <div class="testimonials__slider__dot active__dot"></div>
+                                        <div class="testimonials__slider__dot"></div>
+                                        <div class="testimonials__slider__dot"></div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section class="register">
+     <div class="container">
+          <div class="register__row">
+               <div class="register__part">
+                    <h2>Регистрируйтесь и приступайте к первому бесплатному уроку</h2>
+                    <span>Телефон *</span>
+                    <form action="#!" id="lesson__form" class="form">
+                         <input type="tel" class="input__tel" placeholder="+7 (___) ___-__-__" id="phone__input">
+                         <input type="submit" value="Начать обучение" class="btn__tel" id="lesson__open">
+                    </form>
+                    <div class="register__checkbox">
+                         <input type="checkbox" name="check">
+                         <div>Отправляя заявку, я соглашаюсь с <a href="#!">политикой конфиденциальности и пользовательским соглашением</a></div>
+                    </div>
+               </div>
+               <div class="register__part">
+                    <img src="./img/home/register.png" alt="register">
+               </div>
+          </div>
+     </div>
+</section>
+
+
+          
+          <section class="news">
+               <div class="container">
+                    <div class="news__title">
+                         <div class="title">Полезные новости и статьи</div>
+                         <a href="./news.html" class="btn__inverse news__btn">Все новости</a>
+                    </div>
+                    <div class="news__row">
+                         <div class="news__item">
+                              <div class="news__item__title">Новая система скидок в Language2GO: успейте забрать максимум!</div>
+                              <div class="news__item__date">12-07-2022</div>
+                              <div class="news__item__text">Для многих стоимость изучения иностранного языка является важным критерием при выборе системы обучения. </div>
+                              <div class="news__item__links">
+                                   <div class="news__item__type">Новость</div>
+                                   <a href="./article.html" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                              </div>
+                         </div>
+                         <div class="news__item">
+                              <div class="news__item__title">“Интерактивная платформа: как это работает?” Отвечает основатель проекта...</div>
+                              <div class="news__item__date">08-07-2022</div>
+                              <div class="news__item__text">Моя команда — профессиональные филологи и педагоги-носители языка, преподаватели зарубежных университетов, которые ...</div>
+                              <div class="news__item__links">
+                                   <div class="news__item__type red__type">Интересное</div>
+                                   <a href="./article.html" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                              </div>
+                         </div>
+                         <div class="news__item">
+                              <div class="news__item__title">Новое слово в изучении иностранных языков: интерактивная платформа ...</div>
+                              <div class="news__item__date">29-06-2022</div>
+                              <div class="news__item__text">Для многих стоимость изучения иностранного языка является важным критерием при выборе системы обучения. </div>
+                              <div class="news__item__links">
+                                   <div class="news__item__type">Новость</div>
+                                   <a href="./article.html" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section class="faq">
+               <div class="container">
+                    <div class="faq__row">
+                         <div class="faq__part">
+                              <div>
+                                   <div class="title">Отвечаем на частые вопросы</div>
+                                   <a href="./support.html" class="btn faq__btn">Задать вопрос</a>
+                              </div>
+                              <div>
+                                   <img src="./img/home/faq.png" alt="faq">
+                              </div>
+                         </div>
+                         <div class="faq__part">
+                              <div class="faq__item faq__active">
+                                   <div class="question">
+                                        Как проходит обучение на онлайн-курсах?
+                                        <div class="question__open question__close">-</div>
+                                   </div>
+                                   <div class="answer answer__show">
+                                        Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.
+                                   </div>
+                              </div>
+                              <div class="faq__item">
+                                   <div class="question">
+                                        Я покупаю пакет уроков или онлайн-курс, сколько он действует?
+                                        <div class="question__open">+</div>
+                                   </div>
+                                   <div class="answer">
+                                        Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.
+                                   </div>
+                              </div>
+                              <div class="faq__item">
+                                   <div class="question">
+                                        Как быстро я достигну результатов?
+                                        <div class="question__open">+</div>
+                                   </div>
+                                   <div class="answer">
+                                        Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.
+                                   </div>
+                              </div>
+                              <div class="faq__item">
+                                   <div class="question">
+                                        Когда я могу начать обучение?
+                                        <div class="question__open">+</div>
+                                   </div>
+                                   <div class="answer">
+                                        Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.
+                                   </div>
+                              </div>
+                              <div class="faq__item">
+                                   <div class="question">
+                                        Как проходит обучение на индивидуальных занятиях?
+                                        <div class="question__open">+</div>
+                                   </div>
+                                   <div class="answer">
+                                        Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </main>
+
+
+     <footer class="footer">
+          <div class="container">
+               <div class="footer__row">
+                    <div class="footer__part">
+                         <img src="./img/footer__logo.png" alt="footer__logo" class="footer__logo">
+                         <p class="footer__text">Language2Go — интерактивная платформа для легкого, удобного и быстрого изучения иностранных языков.</p>
+                         <div class="footer__brands">
+                              <img src="./img/visa.png" alt="visa">
+                              <img src="./img/master__card.png" alt="master__card">
+                              <img src="./img/mir.png" alt="mir">
+                         </div>
+                    </div>
+                    <div class="footer__part">
+                         <div class="footer__title">Обучение</div>
+                         <a href="./catalog.html" class="footer__link">Все языки</a>
+                         <a href="./catalog.html" class="footer__link">Взрослым</a>
+                         <a href="./catalog.html" class="footer__link">Детям и подросткам</a>
+                         <a href="./catalog.html" class="footer__link">Мини-курсы</a>
+                         <a href="./catalog.html" class="footer__link">Тренажеры</a>
+                         <a href="./catalog.html" class="footer__link">Индивидуальные занятия</a>
+                    </div>
+                    <div class="footer__part">
+                         <div class="footer__title">Информация</div>
+                         <a href="./about_us.html" class="footer__link">О нас</a>
+                         <a href="./news.html" class="footer__link">Новости</a>
+                         <a href="./faq.html" class="footer__link">Частые вопросы</a>
+                         <a href="./contact.html" class="footer__link">Контакты</a>
+                         <a href="./support.html" class="footer__link">Служба поддержки</a>
+                    </div>
+                    <div class="footer__part">
+                         <div class="footer__title">Контакты</div>
+                         <div class="footer__phone">+7 (495) 156-35-50</div>
+                         <div class="footer__contact">info@language2go.ru<br>support@language2go.ru</div>
+                         <div class="footer__contact">101000, Москва, Россия</div>
+                         <div class="footer__socials">
+                              <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://vk.com/?s" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                              </a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </footer>
+     <div class="footer__bottom">
+          <div class="container">
+               <div class="footer__bottom__row">
+                    <div class="footer__bottom__part">
+                         <div>&copy; 2022 Language to go</div>
+                    </div>
+                    <div class="footer__bottom__part">
+                         <a href="#!">Праровая оговорка</a>
+                         <a href="#!">Пользовательское соглашение</a>
+                         <a href="#!">Политика конфиденциальности</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <script src="./js/script.js"></script>
+</body>
+</html>

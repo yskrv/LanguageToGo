@@ -1,0 +1,83 @@
+{% extends 'layout.nunjucks' %}
+
+{% block head %}
+     <link rel="stylesheet" href="./css/contact.css">
+     <script defer src="./js/contact.js"></script>
+     <title>Контакты - Language to go</title>
+{% endblock %}
+
+{% block content %} 
+     <main>
+          <section class="support">
+               <div class="container">
+                    <div class="page__links">
+                         <a href="./index.html">Главная</a><span class="arrow__link">></span>Контакты 
+                    </div>
+                    <div class="title">Контакты</span></div>
+                    <div class="subtitle">Мы на связи в любое удобное время</div>
+                    <div class="contact">
+                         <div class="contact__row">
+                              <div class="contact__part">
+                                   <div class="contact__item">
+                                        <img src="./img/contact/contact_item1.png" alt="contact__item1">
+                                        <div>
+                                             <div class="contact__item__title">По телефону</div>
+                                             <div class="contact__item__subtitle">+7 (495) 156-35-50</div>
+                                        </div>
+                                   </div>
+                                   <div class="contact__item">
+                                        <img src="./img/contact/contact_item2.png" alt="contact__item2">
+                                        <div>
+                                             <div class="contact__item__title">По электронке</div>
+                                             <a href="mailto:info@language2go.ru" class="contact__item__link">info@lang2go.ru</a>
+                                             <a href="mailto:support@language2go.ru" class="contact__item__link">support@lange2go.ru</a>
+                                        </div>
+                                   </div>
+                                   <div class="contact__item">
+                                        <img src="./img/contact/contact_item3.png" alt="contact__item3">
+                                        <div>
+                                             <div class="contact__item__title">В соц.сетях</div>
+                                             <div class="contact__socials">
+                                                  <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                                  </a>
+                                                  <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                                  </a>
+                                                  <a href="https://vk.com/?s" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                                                  </a>
+                                                  <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="contact__part">
+                                   <div class="contact__title">Нужна помощь с выбором курса?</div>
+                                   <div class="contact__text">Оставьте заявку и мы подберем индивидуальное решение</div>
+                                   <form action="#!" class="form">
+                                        <div class="form__grid">
+                                             <div class="form__row">
+                                                  <div class="form__part">
+                                                       <label>Имя</label>
+                                                       <input type="text" placeholder="Введите ваше имя">
+                                                  </div>
+                                                  <div class="form__part">
+                                                       <label>Имя</label>
+                                                       <input type="text" placeholder="+7(___)___-__-__" id="phone__input">
+                                                  </div>
+                                             </div>
+                                             <div class="form__row">
+                                                  <div class="form__part">
+                                                       <label>Сообщение <span>(не обязательно)</span></label>
+                                                       <textarea placeholder="Расскажите нам о возникшем вопросе"></textarea>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <button class="btn">Оставить заявку</button>
+                                   </form>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </main>
+{% endblock %}

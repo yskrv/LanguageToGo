@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+     <link rel="stylesheet" href="./css/style.css">
+     
+     <link rel="stylesheet" href="./css/course.css">
+     <script defer src="./js/course.js"></script>
+     <script defer src="./js/phone.js"></script>
+     <script defer src="./js/register.js"></script>
+     <title>Немецский для начинающих - Language to go</title>
+
+     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+     <script src="https://use.fontawesome.com/ab2012437d.js"></script>
+</head>
+<body>
+     <div class="modal__container" id="login__modal">
+          <div class="modal modal__blue">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true" id="close"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/support/support_item.png" alt="register">
+                    </div>
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Авторизация</div>
+                         <form action="#!">
+                              <label>E-mail</label>
+                              <input type="text" name="email" placeholder="Введите e-mail">
+                              <label>Пароль</label>
+                              <input type="text" name="email" placeholder="Введите пароль">
+                              <input type="submit" value="Войти" id="login__btn">
+                         </form>
+                         <p>Если у вас нет аккаунта: <span id="register__open" class="link">Регистрация</span></p>
+                    </div>    
+               </div>
+          </div>
+     </div>
+     <div class="modal__container" id="register__modal">
+          <div class="modal modal__red">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Регистрация</div>
+                         <form action="#!">
+                              <label>Имя</label>
+                              <input type="text" name="name" placeholder="Введите имя">
+                              <label>Фамилия</label>
+                              <input type="text" name="surname" placeholder="Введите фамилию">
+                              <label>E-mail</label>
+                              <input type="text" name="email" placeholder="Введите e-mail">
+                              <label>Пароль</label>
+                              <input type="text" name="email" placeholder="Введите пароль">
+                              <input type="submit" value="Зарегистрироваться" id="register__btn">
+                         </form>
+                         <p>Если у вас уже есть аккаунт: <span id="login__open" class="link">Авторизация</span></p>
+                    </div> 
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/home/promo.png" alt="register">
+                    </div>   
+               </div>
+          </div>
+     </div>
+     <div class="modal__container" id="lesson__modal">
+          <div class="modal modal__light">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Вы успешно зарегистрировались на бесплатный урок!</div>
+                         <p></p>
+                    </div> 
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/blog/image.png" alt="phone">
+                    </div>   
+               </div>
+          </div>
+     </div>
+     <div class="modal__container" id="support__modal">
+          <div class="modal modal__blue">
+               <div class="modal__header">
+                    <i class="fa fa-times close__btn" aria-hidden="true"></i>
+               </div>
+               <div class="modal__body">
+                    <div class="modal__body__part" id="small__part">
+                         <img src="./img/home/faq.png" alt="support">
+                    </div> 
+                    <div class="modal__body__part" id="large__part">
+                         <div class="modal__title">Спасибо за обратную связь! В скором времени с вами свяжутся наши сотрудники.</div>
+                    </div> 
+               </div>
+          </div>
+     </div>
+     <header>
+          <nav>
+               <div class="nav__part">
+                    <a href="./index.html" class="nav__logo"><img src="./img/logo.png" alt="logo"></a>
+                    <a href="./catalog.html" class="nav__link">Курсы</a>
+                    <a href="./about_us.html" class="nav__link">О нас</a>
+                    <a href="./news.html" class="nav__link">Блог</a>
+                    <div class="nav__link other__links">
+                         Еще <i class="fa fa-angle-down" aria-hidden="true"></i>
+                         <div class="dropmenu">
+                              <a href="./faq.html" class="nav__link">FAQ</a>
+                              <a href="./contact.html" class="nav__link">Контакты</a>
+                              <a href="./support.html" class="nav__link">Служба поддержки</a>
+                         </div>
+                    </div>
+                    
+                    <a href="./faq.html" class="nav__link nonactive__link">FAQ</a>
+                    <a href="./contact.html" class="nav__link nonactive__link">Контакты</a>
+                    <a href="./support.html" class="nav__link nonactive__link">Служба поддержки</a>
+               </div>
+               <div class="nav__part">
+                    <div class="nav__btn" id="login">Войти</div>
+                    <div class="menu-icon-wrapper">
+                         <div class="menu-icon"></div>
+                    </div>
+               </div>
+          </nav>
+          <div class="mobile__menu">
+               <div class="mobile__menu__part">
+                    <a href="./catalog.html" class="nav__link">Курсы</a>
+                    <a href="./about_us.html" class="nav__link">О нас</a>
+                    <a href="./news.html" class="nav__link">Блог</a>
+                    <a href="./faq.html" class="nav__link">FAQ</a>
+                    <a href="./contact.html" class="nav__link">Контакты</a>
+                    <a href="./support.html" class="nav__link">Служба поддержки</a>
+               </div>
+               <div class="mobile__menu__part">
+                    <div class="nav__btn" id="login__mob">Войти</div>
+               </div>
+          </div>
+     </header>
+      
+     <main>
+          <section class="course">
+               <div class="container">
+                    <div class="page__links">
+                         <a href="./index.html">Главная</a>
+                         <span class="arrow__link">></span>
+                         <a href="./catalog.html">Курсы</a>
+                         <span class="arrow__link">></span>
+                         Немецский для начинающих
+                    </div>
+                    <div class="course__row">
+                         <div class="course__part">
+                              <div class="about">
+                                   <h2 class="title">Немецский для<br>начинающих</h2>
+                                   <h4 class="course__subtitle">О курсе</h4>
+                                   <p class="about__after">
+                                        После прохождения курса:
+                                   </p>
+                                   <ul class="about__after__list">
+                                        <li class="about__after__item">- легко расскажете о себе, представите свою компанию</li>
+                                        <li class="about__after__item">- сможете поддержать беседу и без труда ориентироваться в бытовых ситуациях</li>
+                                        <li class="about__after__item">- легко знакомиться и общаться с окружающими</li>
+                                        <li class="about__after__item">- Вы никогда не потеряетесь в языковой среде!</li>
+                                   </ul>
+                                   <div class="about__for">Для начинающих</div>
+                              </div>
+                              <div class="program">
+                                   <h4 class="course__subtitle">Программа курса</h4>
+                                   <div class="program__lesson">
+                                        <div class="program__lesson__title">
+                                             <div><span>Модуль 1:</span>Über mich / О себе </div>
+                                             <div>5 уроков / 50 баллов 
+                                                  <div class="lesson__btn">
+                                                       <i class="fa fa-angle-down active__lesson__btn" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="program__lesson__text program__lesson__show">
+                                             <div class="program__lesson__border"></div>
+                                             <p>Сложно сказать, почему представители современных социальных резервов набирают популярность среди определенных слоев населения, а значит, должны быть подвергнуты целой серии независимых исследований. Противоположная точка зрения подразумевает, что непосредственные участники технического прогресса, инициированные исключительно синтетически, ограничены исключительно образом мышления</p>
+                                        </div>
+                                   </div>
+                                   <div class="program__lesson">
+                                        <div class="program__lesson__title">
+                                             <div><span>Модуль 2:</span>Familie / Семья </div>
+                                             <div>4 урокa / 40 баллов 
+                                                  <div class="lesson__btn">
+                                                       <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="program__lesson__text">
+                                             <div class="program__lesson__border"></div>
+                                             <p>Сложно сказать, почему представители современных социальных резервов набирают популярность среди определенных слоев населения, а значит, должны быть подвергнуты целой серии независимых исследований. Противоположная точка зрения подразумевает, что непосредственные участники технического прогресса, инициированные исключительно синтетически, ограничены исключительно образом мышления</p>
+                                        </div>
+                                   </div>
+                                   <div class="program__lesson">
+                                        <div class="program__lesson__title">
+                                             <div><span>Модуль 3:</span>Mein Tagesablauf / Мой день </div>
+                                             <div>6 уроков / 60 баллов 
+                                                  <div class="lesson__btn">
+                                                       <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="program__lesson__text">
+                                             <div class="program__lesson__border"></div>
+                                             <p>Сложно сказать, почему представители современных социальных резервов набирают популярность среди определенных слоев населения, а значит, должны быть подвергнуты целой серии независимых исследований. Противоположная точка зрения подразумевает, что непосредственные участники технического прогресса, инициированные исключительно синтетически, ограничены исключительно образом мышления</p>
+                                        </div>
+                                   </div>
+                                   <div class="program__lesson">
+                                        <div class="program__lesson__title">
+                                             <div><span>Модуль 4:</span>Zahlen / Числа </div>
+                                             <div>3 урокa / 20 баллов 
+                                                  <div class="lesson__btn">
+                                                       <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="program__lesson__text">
+                                             <div class="program__lesson__border"></div>
+                                             <p>Сложно сказать, почему представители современных социальных резервов набирают популярность среди определенных слоев населения, а значит, должны быть подвергнуты целой серии независимых исследований. Противоположная точка зрения подразумевает, что непосредственные участники технического прогресса, инициированные исключительно синтетически, ограничены исключительно образом мышления</p>
+                                        </div>
+                                   </div>
+                                   <div class="program__lesson">
+                                        <div class="program__lesson__title">
+                                             <div><span>Модуль 5:</span>Gesprächssituationen / Разговорные ситуации</div>
+                                             <div>7 уроков / 70 баллов 
+                                                  <div class="lesson__btn">
+                                                       <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="program__lesson__text">
+                                             <div class="program__lesson__border"></div>
+                                             <p>Сложно сказать, почему представители современных социальных резервов набирают популярность среди определенных слоев населения, а значит, должны быть подвергнуты целой серии независимых исследований. Противоположная точка зрения подразумевает, что непосредственные участники технического прогресса, инициированные исключительно синтетически, ограничены исключительно образом мышления</p>
+                                        </div>
+                                   </div>
+                                   <div class="program__lesson">
+                                        <div class="program__lesson__title">
+                                             <div><span>Модуль 6:</span>Freizeitgestaltung / Досуг </div>
+                                             <div>6 уроков / 60 баллов 
+                                                  <div class="lesson__btn">
+                                                       <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="program__lesson__text">
+                                             <div class="program__lesson__border"></div>
+                                             <p>Сложно сказать, почему представители современных социальных резервов набирают популярность среди определенных слоев населения, а значит, должны быть подвергнуты целой серии независимых исследований. Противоположная точка зрения подразумевает, что непосредственные участники технического прогресса, инициированные исключительно синтетически, ограничены исключительно образом мышления</p>
+                                        </div>
+                                   </div>
+                                   <div class="program__lesson">
+                                        <div class="program__lesson__title">
+                                             <div><span>Модуль 7:</span>Berufsleben / Профессиональная жизнь </div>
+                                             <div>6 уроков / 60 баллов 
+                                                  <div class="lesson__btn">
+                                                       <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="program__lesson__text">
+                                             <div class="program__lesson__border"></div>
+                                             <p>Сложно сказать, почему представители современных социальных резервов набирают популярность среди определенных слоев населения, а значит, должны быть подвергнуты целой серии независимых исследований. Противоположная точка зрения подразумевает, что непосредственные участники технического прогресса, инициированные исключительно синтетически, ограничены исключительно образом мышления</p>
+                                        </div>
+                                   </div>
+                                   <div class="program__lesson">
+                                        <div class="program__lesson__title">
+                                             <div><span>Модуль 8:</span>Feiertage / Праздники </div>
+                                             <div>5 уроков / 50 баллов 
+                                                  <div class="lesson__btn">
+                                                       <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="program__lesson__text">
+                                             <div class="program__lesson__border"></div>
+                                             <p>Сложно сказать, почему представители современных социальных резервов набирают популярность среди определенных слоев населения, а значит, должны быть подвергнуты целой серии независимых исследований. Противоположная точка зрения подразумевает, что непосредственные участники технического прогресса, инициированные исключительно синтетически, ограничены исключительно образом мышления</p>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="howitworks">
+                                   <div class="course__subtitle">Как проходит обучение</div>
+                                   <div class="howitworks__item">
+                                        <img src="./img/course/course_item-1.png">
+                                        <div>
+                                             <div class="howitworks__item__title">Онлайн-платформа<br>для обучения и выполнения заданий</div>
+                                        </div>
+                                   </div>
+
+                                   <div class="howitworks__item">
+                                        <img src="./img/course/course_item-2.png">
+                                        <div>
+                                             <div class="howitworks__item__title">Полностью<br>интерактивный формат</div>
+                                             <div class="howitworks__item__subtitle">(3D-учитель расскажет вам весь материал)</div>
+                                        </div>
+                                   </div>
+
+                                   <div class="howitworks__item">
+                                        <img src="./img/course/course_item-3.png">
+                                        <div>
+                                             <div class="howitworks__item__title">Видео-чат для общения<br>с сокурсниками</div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="comments">
+                                   <div class="comments__row">
+                                        <div class="course__subtitle">Отзывы о курсе</div>
+                                        <div class="btn__inverse" id="comment__btn">Все отзывы</div>
+                                   </div>
+                                   <div class="comment blue">
+                                        <div class="comment__author__stars">
+                                             <div class="comment__author">Артем М. <br><span>Студент</span></div>
+                                             <div class="comment__stars">
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                             </div>
+                                        </div>
+                                        <div class="comment__text">
+                                             Занятия курса очень понравились, в основном благодаря необычной системе — я человек настроения и не могу подстраиваться под график индивидуального репетитора или тем более целой группы. Иногда занимался несколько часов подряд — настолько легко и интересно организована подача материала, а один раз по болезни пропустил целую неделю. 
+                                        </div>
+                                   </div>
+                                   <div class="comment red">
+                                        <div class="comment__author__stars">
+                                             <div class="comment__author">Виктория Б. <br><span>Студент</span></div>
+                                             <div class="comment__stars">
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                             </div>
+                                        </div>
+                                        <div class="comment__text">
+                                             Первое пробное занятие прошло отлично. Все мои пожелания по педагогу были полностью учтены. На занятии был определен мой уровень владения языком и оговорены многие нюансы, относительно адаптации курсы лично под меня, мои цели и интересы. Уже вижу хороший результат, в том числе, активно применяю знания на работе. Рекомендую обратиться за помощью к данной онлайн школе.
+                                        </div>
+                                   </div>
+                                   <div class="comment light">
+                                        <div class="comment__author__stars">
+                                             <div class="comment__author">Евгений Ш. <br><span>Студент</span></div>
+                                             <div class="comment__stars">
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                             </div>
+                                        </div>
+                                        <div class="comment__text">
+                                             Уроки с преподавателем проходят на удобной платформе. На проверку домашнее задание отправляю заранее перед уроком, чтобы преподаватель успел проверить и только после этого на уроке обсуждаем возникшие вопросы. И что самое важное для меня, большая часть урока посвящена речи. Очень много говоришь, барьер ломается и хочется говорить еще больше ))
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="similar">
+                                   <div class="course__subtitle">Похожие курсы</div>
+                                   <div class="similar__row">
+                                        <div class="similar__item card red">
+                                             <div class="card__logo">
+                                                  <img src="./img/languages/spain.png" alt="spain">
+                                                  <div class="card__title">Испанский для начального уровня</div>
+                                                  <div class="card__length">Длительность: <span>36 часов</span></div>
+                                                  <div class="card__modules">Модули: <span>2</span></div>
+                                                  <div class="card__links">
+                                                       <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                       </span></a>
+                                                       <div class="card__price">От 3990р</div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="similar__item card blue">
+                                             <div class="card__logo">
+                                                  <img src="./img/languages/china.png" alt="china">
+                                                  <div class="card__title">Китайский для среднего уровня</div>
+                                                  <div class="card__length">Длительность: <span>54 часов</span></div>
+                                                  <div class="card__modules">Модули: <span>4</span></div>
+                                                  <div class="card__links">
+                                                       <a href="./course.html" class="card__link">Узнать подробнее <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                       </span></a>
+                                                       <div class="card__price">От 9450р</div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="course__part">
+                              <div class="buying">
+                                   <div class="buying__row">
+                                        <div class="buying__part">Стоимость <span>от 6520р</span></div>
+                                        <div class="buying__part"><img src="./img/languages/german_with_border.png" alt="german"></div>
+                                   </div>
+                                   <div class="buying__list">
+                                        <div class="buying__item"><span>42</span>Уроков</div>
+                                        <div class="buying__item"><span>396</span>Заданий</div>
+                                        <div class="buying__item"><span>9</span>Тестов</div>
+                                        <div class="buying__item"><span>4</span>Занятий с экспертом</div>
+                                   </div>
+                                   <a href="#register" class="btn buying__btn">Записаться на курс</a>
+                              </div>
+                              <div class="top">
+                                   <div class="course__subtitle">Лучшие ученики</div>
+                                   <div class="top__item">
+                                        <div class="top__part">
+                                             <div class="top__place">1</div>
+                                             Андрей Белоусов
+                                        </div>
+                                        <div class="top__part">
+                                             <div class="top__grade">300 баллов</div>
+                                        </div>
+                                   </div>
+                                   <div class="top__item">
+                                        <div class="top__part">
+                                             <div class="top__place">2</div>
+                                             Полина Трофимова
+                                        </div>
+                                        <div class="top__part">
+                                             <div class="top__grade">297 баллов</div>
+                                        </div>
+                                   </div>
+                                   <div class="top__item">
+                                        <div class="top__part">
+                                             <div class="top__place">3</div>
+                                             Артём Кондратов
+                                        </div>
+                                        <div class="top__part">
+                                             <div class="top__grade">296 баллов</div>
+                                        </div>
+                                   </div>
+                                   <div class="top__item">
+                                        <div class="top__part">
+                                             <div class="top__place">4</div>
+                                             Ольга Михайлова
+                                        </div>
+                                        <div class="top__part">
+                                             <div class="top__grade">294 баллов</div>
+                                        </div>
+                                   </div>
+                                   <div class="top__item">
+                                        <div class="top__part">
+                                             <div class="top__place">5</div>
+                                             Амина Шарова
+                                        </div>
+                                        <div class="top__part">
+                                             <div class="top__grade">293 баллов</div>
+                                        </div>
+                                   </div>
+                                   <div class="top__open__close"></div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </main>
+
+     <section class="register" id="register">
+     <div class="container">
+          <div class="register__row">
+               <div class="register__part">
+                    <h2>Регистрируйтесь и приступайте к первому бесплатному уроку</h2>
+                    <span>Телефон *</span>
+                    <form action="#!" id="lesson__form" class="form">
+                         <input type="tel" class="input__tel" placeholder="+7 (___) ___-__-__" id="phone__input">
+                         <input type="submit" value="Начать обучение" class="btn__tel" id="lesson__open">
+                    </form>
+                    <div class="register__checkbox">
+                         <input type="checkbox" name="check">
+                         <div>Отправляя заявку, я соглашаюсь с <a href="#!">политикой конфиденциальности и пользовательским соглашением</a></div>
+                    </div>
+               </div>
+               <div class="register__part">
+                    <img src="./img/home/register.png" alt="register">
+               </div>
+          </div>
+     </div>
+</section>
+
+
+
+
+     <footer class="footer">
+          <div class="container">
+               <div class="footer__row">
+                    <div class="footer__part">
+                         <img src="./img/footer__logo.png" alt="footer__logo" class="footer__logo">
+                         <p class="footer__text">Language2Go — интерактивная платформа для легкого, удобного и быстрого изучения иностранных языков.</p>
+                         <div class="footer__brands">
+                              <img src="./img/visa.png" alt="visa">
+                              <img src="./img/master__card.png" alt="master__card">
+                              <img src="./img/mir.png" alt="mir">
+                         </div>
+                    </div>
+                    <div class="footer__part">
+                         <div class="footer__title">Обучение</div>
+                         <a href="./catalog.html" class="footer__link">Все языки</a>
+                         <a href="./catalog.html" class="footer__link">Взрослым</a>
+                         <a href="./catalog.html" class="footer__link">Детям и подросткам</a>
+                         <a href="./catalog.html" class="footer__link">Мини-курсы</a>
+                         <a href="./catalog.html" class="footer__link">Тренажеры</a>
+                         <a href="./catalog.html" class="footer__link">Индивидуальные занятия</a>
+                    </div>
+                    <div class="footer__part">
+                         <div class="footer__title">Информация</div>
+                         <a href="./about_us.html" class="footer__link">О нас</a>
+                         <a href="./news.html" class="footer__link">Новости</a>
+                         <a href="./faq.html" class="footer__link">Частые вопросы</a>
+                         <a href="./contact.html" class="footer__link">Контакты</a>
+                         <a href="./support.html" class="footer__link">Служба поддержки</a>
+                    </div>
+                    <div class="footer__part">
+                         <div class="footer__title">Контакты</div>
+                         <div class="footer__phone">+7 (495) 156-35-50</div>
+                         <div class="footer__contact">info@language2go.ru<br>support@language2go.ru</div>
+                         <div class="footer__contact">101000, Москва, Россия</div>
+                         <div class="footer__socials">
+                              <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://vk.com/?s" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                              </a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </footer>
+     <div class="footer__bottom">
+          <div class="container">
+               <div class="footer__bottom__row">
+                    <div class="footer__bottom__part">
+                         <div>&copy; 2022 Language to go</div>
+                    </div>
+                    <div class="footer__bottom__part">
+                         <a href="#!">Праровая оговорка</a>
+                         <a href="#!">Пользовательское соглашение</a>
+                         <a href="#!">Политика конфиденциальности</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <script src="./js/script.js"></script>
+</body>
+</html>

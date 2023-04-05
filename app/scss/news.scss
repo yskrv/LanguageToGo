@@ -1,0 +1,140 @@
+@import "static/variables";
+@import "static/mixins";
+
+.catalog__btns{
+     margin-bottom: 50px;
+}
+.news{
+     margin-bottom: $mb;
+     &__row{
+          @include flex($ai: flex-start);
+          gap: 40px;
+     }
+     &__part{
+          &:first-child{
+               width: calc(200%/3);
+          }
+          &:last-child{
+               width: calc(100%/3);
+          }
+     }
+     &__description{
+          @include text(20px, 28px, 500, $gray);
+          margin: 10px 0 30px 0;
+     }
+     &__grid{
+          display: grid;
+          grid-gap: 40px;
+          grid-template-columns: repeat(2, 1fr);
+     }
+     &__item{
+          &:first-child{
+               grid-column-start: 1;
+               grid-column-end: 3;
+          }
+     }
+     &__list{
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+     }
+     &__flex{
+          margin: 40px 0;
+          @include flex();
+          h4{
+               @include text(24px, 32px, 700, $black);
+          }
+     }
+}
+
+.article{
+     &__date{
+          margin: 30px 0;
+          @include text(16px, 24px, 500, $blue);
+     }
+     &__content{
+          @include text(16px, 24px, 500, $gray);
+          margin-bottom: 30px;
+     }
+     &__type{
+          margin: 12px 0;
+          @include flex();
+     }
+     &__socials{
+          @include flex($jc:flex-end);
+          gap: 12px;
+          h6{
+               display: inline-block;
+               @include text(16px, 24px, 500, $black);
+               margin-right: 4px;
+          }
+          a{
+               i{
+                    color: $purple;
+                    font-size: 20px;
+               }
+          }
+     }
+}
+
+@media screen and (max-width: 1200px) {
+     .news{
+          &__description{
+               font-size: 18px;
+               line-height: 26px; 
+          }
+     }
+}
+
+@media screen and (max-width: 960px) {
+     .news{
+          &__part{
+               &:first-child{
+                    width: 100%;
+               }
+               &:last-child{
+                    display: none;
+               }
+          }
+     }
+}
+
+@media screen and (max-width: 640px) {
+     .news{
+          &__description{
+               margin: 6px 0 15px 0;
+               font-size: 16px;
+               line-height: 24px; 
+          }
+          &__grid{
+               gap: 30px;
+               display: flex;
+               flex-direction: column;
+          }
+          &__item{
+               width: 100%;
+          }
+     }
+}
+
+@media screen and (max-width: 520px) {
+     .article{
+          &__type{
+               flex-direction: column;
+               .news__item__type{
+                    align-self: flex-start;
+               }
+          }
+          &__socials{
+               align-self: flex-end;
+          }
+     }
+}
+
+@media screen and (max-width: 380px){
+     .article{
+          &__socials{
+               margin-top: 12px;
+          }
+     }
+}

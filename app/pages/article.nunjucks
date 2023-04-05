@@ -1,0 +1,83 @@
+{% extends 'layout.nunjucks' %}
+
+{% block head %}
+     <link rel="stylesheet" href="./css/news.css">
+     <title>Новая система скидок в Language2GO - Language to go</title>
+{% endblock %}
+
+{% block content %} 
+     <main>
+          <section class="news">
+               <div class="container">
+                    <div class="page__links">
+                         <a href="./index.html">Главная</a><span class="arrow__link">></span><a href="./news.html">Блог</a><span class="arrow__link">></span>Новая система скидок в Language2GO... 
+                    </div>
+
+                    <div class="news__row">
+                         <div class="news__part">
+                              <div class="title">Новая система скидок в Language2GO: успейте забрать максимум!</div>
+                              <div class="article__date">12-07-2022</div>
+                         
+                              <p class="article__content">
+                                   Для многих стоимость изучения иностранного языка является важным критерием при выборе системы обучения. Именно поэтому мы предлагаем нашим клиентам не только бесплатные пробные уроки, но и гибкую систему скидок, которая позволит существенно снизить затраты.<br><br>
+                                   Начните с выбора оптимальной программы обучения: бесплатное тестирование определит ваш уровень знаний и предложит лучший вариант для быстрого прогресса. Следующий шаг — активация купона и приятное изменение стоимости курса в меньшую сторону.<br><br>
+                                   Купоны на скидку можно найти в соцсетях Language2GO, получить в рассылке для лояльных клиентов или в приобрести в подарок для ваших близких, а бесплатные уроки ждут всех желающих на нашем сайте!
+                              </p>
+                              <div class="article__type">
+                                   <div class="news__item__type">Новость</div>
+                                   <div class="article__socials">
+                                        <h6>Подписаться:</h6>
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="https://vk.com/?s" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                   </div>
+                              </div>
+                              <div class="news__flex">
+                                   <h4>Другие новости</h4>
+                                   <a href="./news.html" class="btn__inverse">Все новости</a>
+                              </div>
+                              <div class="news__list">
+                                   <div class="news__item">
+                                        <div class="news__item__title">Новая система скидок в Language2GO: успейте забрать максимум!</div>
+                                        <div class="news__item__date">12-07-2022</div>
+                                        <div class="news__item__text">Для многих стоимость изучения иностранного языка является важным критерием при выборе системы обучения. </div>
+                                        <div class="news__item__links">
+                                             <div class="news__item__type">Новость</div>
+                                             <a href="#!" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div>
+                                   </div>
+                                   <div class="news__item">
+                                        <div class="news__item__title">“Интерактивная платформа: как это работает?” Отвечает основатель проекта...</div>
+                                        <div class="news__item__date">08-07-2022</div>
+                                        <div class="news__item__text">Моя команда — профессиональные филологи и педагоги-носители языка, преподаватели зарубежных университетов, которые ...</div>
+                                        <div class="news__item__links">
+                                             <div class="news__item__type red__type">Интересное</div>
+                                             <a href="#!" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div>
+                                   </div>
+                                   <div class="news__item">
+                                        <div class="news__item__title">Новое слово в изучении иностранных языков: интерактивная платформа ...</div>
+                                        <div class="news__item__date">29-06-2022</div>
+                                        <div class="news__item__text">Для многих стоимость изучения иностранного языка является важным критерием при выборе системы обучения. </div>
+                                        <div class="news__item__links">
+                                             <div class="news__item__type">Новость</div>
+                                             <a href="#!" class="news__item__link">Подробнее <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div>
+                                   </div>
+                              </div>  
+                         </div>
+                         <div class="news__part">
+                              <img src="./img/blog/image.png" alt="blog_image">
+                         </div>
+                    </div>
+
+                    
+               </div>
+          </section>
+     </main>
+{% endblock %}

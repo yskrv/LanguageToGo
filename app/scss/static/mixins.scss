@@ -1,0 +1,39 @@
+@import 'variables';
+
+@mixin text($size: 20px, $lineHeight: 35px, $weight: 600, $color: $black) {
+     font-size: $size;
+     line-height: $lineHeight;
+     font-weight: $weight;
+     color: $color;
+}
+
+@mixin flex($jc: space-between, $ai: center) {
+     display: flex;
+     justify-content: $jc;
+     align-items: $ai;
+}
+
+@mixin btn($size: 16px, $color: white, $bg: $purple, $padding: 12px 18px) {
+     display: inline-block;
+     font-size: $size;
+     color: $color;
+     background-color: $bg;
+     padding: $padding;
+     border-radius: 8px;
+     border: 1px solid $bg;
+     transition: 0.25s ease;
+     &:hover{
+          cursor: pointer;
+          color: $bg;
+          background-color: inherit;
+     }
+}
+
+@mixin title($maw-w: 100%){
+     font-weight: 900;
+     font-size: 46px;
+     line-height: 54px;
+     color: $black;
+
+     max-width: $maw-w;
+}
